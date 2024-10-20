@@ -1,12 +1,13 @@
 version: 0.0
 resources:
-  - name:devops4
+  - name: devops4
     type: AWS::Lambda::Function
     properties:
-      name:devops4
-      alias: your-lambda-alias
-      currentVersion: 1
-      targetVersion: 2
+      name: devops4
+      alias:
+        name: your-lambda-alias
+        currentVersion: 1
+        targetVersion: 2
 hooks:
   BeforeAllowTraffic:
     - location: scripts/before_allow_traffic.sh
