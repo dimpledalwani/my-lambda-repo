@@ -1,9 +1,9 @@
 version: 0.0
 resources:
-  - name: your-lambda-function-name
+  - name:devops4
     type: AWS::Lambda::Function
     properties:
-      name: your-lambda-function-name
+      name:devops4
       alias: your-lambda-alias
       currentVersion: 1
       targetVersion: 2
