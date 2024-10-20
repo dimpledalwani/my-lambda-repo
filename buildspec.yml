@@ -2,20 +2,12 @@ version: 0.2
 
 phases:
   install:
-    commands:
-      - echo Installing dependencies...
-      - pip install -r requirements.txt
-  pre_build:
-    commands:
-      - echo Running pre-build steps...
+    runtime-versions:
+      python: 3.12
   build:
     commands:
-      - echo Build started on `date`
-      - echo Compiling the application...
-  post_build:
-    commands:
-      - echo Build completed on `date`
-
+      - echo "builld package"
+      - zip -r lambda_function.zip .  # Packages the code
 artifacts:
   files:
-    - '**/*'
+    - lambda_function.zip  
